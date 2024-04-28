@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <RootNamespace>SoowGoodWeb</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Services\AccessToken2.cs" />
+    <Compile Remove="Services\PaymentService.cs" />
+    <Compile Remove="Services\RtcTokenBuilder2.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SoowGoodWeb.Domain\SoowGoodWeb.Domain.csproj" />
+    <ProjectReference Include="..\SoowGoodWeb.Application.Contracts\SoowGoodWeb.Application.Contracts.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AgoraDynamicKey" Version="1.0.0" />
+    <PackageReference Include="agora_csharp_sdk" Version="3.6.2.4" />
+    <PackageReference Include="Crc32.NET" Version="1.2.0" />
+    <PackageReference Include="IdentityModel" Version="6.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR" Version="1.1.0" />
+    <PackageReference Include="Nancy" Version="2.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Volo.Abp.Account.Application" Version="7.2.3" />
+    <PackageReference Include="Volo.Abp.Identity.Application" Version="7.2.3" />
+    <PackageReference Include="Volo.Abp.PermissionManagement.Application" Version="7.2.3" />
+    <PackageReference Include="Volo.Abp.TenantManagement.Application" Version="7.2.3" />
+    <PackageReference Include="Volo.Abp.FeatureManagement.Application" Version="7.2.3" />
+    <PackageReference Include="Volo.Abp.SettingManagement.Application" Version="7.2.3" />
+  </ItemGroup>
+
+</Project>
